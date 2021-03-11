@@ -20,8 +20,9 @@
     <remarks>
       <para>
             A status of <see cref="F:Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy" /> should be considered the default value for a failing health check. Application
-            developers may configure a health check to report a different status as desired.
-            </para>
+            developers may configure a health check to report a different status as desired when implementing <see cref="T:Microsoft.Extensions.Diagnostics.HealthChecks.IHealthCheck" />.
+            In that case, the default value should be considered <see cref="F:Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckRegistration.FailureStatus" />.
+      </para>
       <para>
             The values of this enum or ordered from least healthy to most healthy. So <see cref="F:Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Degraded" /> is
             greater than <see cref="F:Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy" /> but less than <see cref="F:Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Healthy" />.
